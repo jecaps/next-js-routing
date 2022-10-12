@@ -1,6 +1,6 @@
-import { getProductById } from "../../services/data";
 import Head from "next/head";
 import Link from "next/link";
+import { getProductById } from "../../services/data";
 
 export async function getServerSideProps(ctx) {
   const { productId } = ctx.params;
@@ -12,8 +12,6 @@ export async function getServerSideProps(ctx) {
 }
 
 export default function Product({ name, description, price, category }) {
-  console.log(name);
-
   return (
     <>
       <Head>
@@ -22,6 +20,18 @@ export default function Product({ name, description, price, category }) {
       <h1>Produkt {name}</h1>
       <p>Preis: {price}</p>
       <h2>Details</h2>
+      {/* <Table>
+        <tbody>
+          <tr>
+            <TdBold>Beschreibung:</TdBold>
+            <td>{description}</td>
+          </tr>
+          <tr>
+            <TdBold>Kategorie:</TdBold>
+            <td>{category}</td>
+          </tr>
+        </tbody>
+      </Table> */}
       <Link href={`/products`}>Alle Produkte</Link>
     </>
   );

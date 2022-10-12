@@ -11,6 +11,8 @@ export async function getServerSideProps() {
 }
 
 export default function Products({ products }) {
+  console.log(products);
+
   return (
     <>
       <Head>
@@ -19,7 +21,7 @@ export default function Products({ products }) {
       <ul>
         {products.map((product) => (
           <li key={product.id}>
-            <Link href={`/products/${product.id}}`}>{product.name}</Link>
+            <Link href={`/products/${product.id}`}>{product.name}</Link>
           </li>
         ))}
       </ul>
