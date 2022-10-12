@@ -12,7 +12,7 @@ export default function Header() {
         <Link href="/" passHref>
           <StyledNavLink active={pathname === "/"}>Home</StyledNavLink>
         </Link>
-        <Link href="/product" passHref>
+        <Link href="/products" passHref>
           <StyledNavLink active={pathname === "/product"}>
             Product
           </StyledNavLink>
