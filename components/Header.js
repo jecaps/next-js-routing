@@ -1,13 +1,22 @@
+import Link from "next/link";
 import styled from "styled-components";
 
 export default function Header() {
   return (
     <StyledHeader>
       <StyledNav>
-        <a>Home</a>
-        <a>Product</a>
-        <a>Team</a>
-        <a>Account</a>
+        <Link href="/">
+          <a>Home</a>
+        </Link>
+        <Link href="/product">
+          <a>Product</a>
+        </Link>
+        <Link href="/team">
+          <a>Team</a>
+        </Link>
+        <Link href="/account">
+          <a>Account</a>
+        </Link>
       </StyledNav>
     </StyledHeader>
   );
